@@ -1,0 +1,11 @@
+{
+  "name": "gridix",
+  "version": "1.0.0",
+  "description": "Responsive CSS flexbox based grid system for modern webdesign",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Henrik Oldenborg",
+  "license": "ISC"
+}
