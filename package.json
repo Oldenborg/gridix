@@ -4,8 +4,16 @@
   "description": "Responsive CSS flexbox based grid system for modern webdesign",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node build.js",
+    "dev": "live-server"
   },
   "author": "Henrik Oldenborg",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.64.1"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
 }
