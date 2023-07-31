@@ -1,0 +1,118 @@
+// Mixin to generate column classes for different screen sizes
+=generate-columns($screen-size: null)
+  @for $i from 1 through 12
+    .col#{$screen-size}-#{$i}
+      flex: 0 0 calc(((100% / #{$gridix-columns}) * #{$i}) - #{$gridix-gap})
+      max-width: calc(((100% / #{$gridix-columns}) * #{$i}) - #{$gridix-gap})
+      overflow: hidden
+
+// Mixin to generate column classes for different screen sizes
+=generate-columns-with-no-gap($screen-size: null)
+  @for $i from 1 through 12
+    .nogap
+      .col#{$screen-size}-#{$i}
+        flex: 0 0 calc(((100% / #{$gridix-columns}) * #{$i}))
+        max-width: calc(((100% / #{$gridix-columns}) * #{$i}))
+        overflow: hidden
+
+.xs, .sm, .md, .lg, .xl, .xxl, .xxxl
+  display: none
+
+// Default column settings
++generate-columns
++generate-columns-with-no-gap
+
+// Responsive column settings for different screen sizes
+@media (max-width: $screen-sm)
+  +generate-columns(-xs)
+  +generate-columns-with-no-gap(-xs)
+
+  .xs, .sm, .md, .lg, .xl, .xxl, .xxxl
+    display: none
+
+  .xs
+    display: initial
+
+@media (min-width: $screen-sm)
+  +generate-columns(-sm)
+  +generate-columns-with-no-gap(-sm)
+  .xs, .sm, .md, .lg, .xl, .xxl, .xxxl
+    display: none
+  .sm
+    display: initial
+
+@media (min-width: $screen-md)
+  +generate-columns(-md)
+  +generate-columns-with-no-gap(-md)
+  .xs, .sm, .md, .lg, .xl, .xxl, .xxxl
+    display: none
+  .md
+    display: initial
+
+@media (min-width: $screen-lg)
+  +generate-columns(-lg)
+  +generate-columns-with-no-gap(-lg)
+  .xs, .sm, .md, .lg, .xl, .xxl, .xxxl
+    display: none
+  .lg
+    display: initial
+
+@media (min-width: $screen-xl)
+  +generate-columns(-xl)
+  +generate-columns-with-no-gap(-xl)
+  .xs, .sm, .md, .lg, .xl, .xxl, .xxxl
+    display: none
+  .xl
+    display: initial
+
+@media (min-width: $screen-xxl)
+  +generate-columns(-xxl)
+  +generate-columns-with-no-gap(-xxl)
+
+  .xs, .sm, .md, .lg, .xl, .xxl, .xxxl
+    display: none
+  .xxl
+    display: initial
+
+@media (min-width: $screen-xxxl)
+  +generate-columns(-xxxl)
+  +generate-columns-with-no-gap(-xxxl)
+  .xs, .sm, .md, .lg, .xl, .xxl, .xxxl
+    display: none
+  .xxxl
+    display: initial
+
+.row
+  display: flex
+  flex-wrap: wrap
+  gap: var(--gridix-gap)
+  margin-right: calc(var(--gridix-gap) * -1)
+
+  &.nogap
+    margin-right: 0
+    gap: 0
+
+.col
+  flex-basis: 0
+  flex-grow: 1
+  max-width: 100%
+
+.container-base
+  margin-left: var(--gridix-gap)
+  margin-right: var(--gridix-gap)
+  overflow: hidden
+
+.container
+  @extend .container-base
+  max-width: $screen-xxxl
+
+  @media (min-width: $screen-xxxl-max-container-size)
+    margin-left: auto
+    margin-right: auto
+
+.container-fluid
+  @extend .container-base
+
+section
+  padding-top: $gridix-section-padding
+  padding-bottom: $gridix-section-padding
