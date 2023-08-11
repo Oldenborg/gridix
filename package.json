@@ -1,11 +1,11 @@
 {
-  "name": "@oldenborg/gridix",
+  "name": "css-gridix",
   "version": "1.0.0",
   "description": "Responsive CSS flexbox based grid system for modern webdesign",
-  "main": "index.js",
+  "main": "dist/assets/style-91a4cd11.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node build.js",
+    "build": "vite build",
     "dev": "vite --open"
   },
   "author": "Henrik Oldenborg",
