@@ -20,29 +20,39 @@ In vue.js you would do this in your `main.js` file:
 import "css-gridix";
 ```
 
-## Building
+## Releasing a new version
 
-To build Gridix, you need to have [Node.js](https://nodejs.org/en/) installed. You can then clone the repository and install the dependencies:
+1. After making your changes to the code, you must first build the project. This will create a new version of the css file in the dist folder. You can then bump the version number using the npm version command:
 
 ```bash
-git clone
-cd gridix
-npm install
 npm run build
 ```
 
-## Releasing a new version
+2. Update the main entrypoint for the application in the package.json
 
-### Bumping the version
+```json
+...
+"main": "dist/assets/style-91a4cd11.css",
+...
+```
+
+3. Commit your changes
+
+4. now you can bump the version number
 
 ```bash
 npm version [major|minor|patch]
 ```
 
-### publihing to npm
+5. a new commit is created with the new version number and a tag is created with the same version number. Push the changes to the remote repository
 
 ```bash
-npm login
+git push
+```
+
+6. Finally, you can publish the new version to npm
+
+```bash
 npm publish
 ```
 
