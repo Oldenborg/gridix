@@ -1,6 +1,6 @@
 {
   "name": "css-gridix",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Responsive CSS flexbox based grid system for modern webdesign",
   "main": "dist/assets/style-dd636fad.css",
   "scripts": {
