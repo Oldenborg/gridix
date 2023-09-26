@@ -1,0 +1,110 @@
+// Utility classes for screen sizes
+=upward-visibility
+    .sm-up,
+    .md-up,
+    .lg-up,
+    .xl-up,
+    .xxl-up,
+    .xxxl-up
+        display: none
+
+    @media (min-width: $screen-sm)
+        .sm-up
+            display: initial
+
+    @media (min-width: $screen-md)
+        .md-up
+            display: initial
+
+    @media (min-width: $screen-lg)
+        .lg-up
+            display: initial
+
+    @media (min-width: $screen-xl)
+        .xl-up
+            display: initial
+
+    @media (min-width: $screen-xxl)
+        .xxl-up
+            display: initial
+
+    @media (min-width: $screen-xxxl)
+        .xxxl-up
+            display: initial
+
+// Utility classes for screen sizes and down
+=downward-visibility
+    .xs-down,
+    .sm-down,
+    .md-down,
+    .lg-down,
+    .xl-down,
+    .xxl-down,
+    .xxxl-down
+        display: none
+
+    @media (max-width: $screen-sm - 1)
+        .xs-down
+            display: initial
+
+    @media (max-width: $screen-md - 1)
+        .sm-down
+            display: initial
+
+    @media (max-width: $screen-lg - 1)
+        .md-down
+            display: initial
+
+    @media (max-width: $screen-xl - 1)
+        .lg-down
+            display: initial
+
+    @media (max-width: $screen-xxl - 1)
+        .xl-down
+            display: initial
+
+    @media (max-width: $screen-xxxl - 1)
+        .xxl-down
+            display: initial
+
+    @media (min-width: $screen-xxxl)
+        .xxxl-down
+            display: initial
+
+=specific-visibility
+    .is-sm,
+    .is-md,
+    .is-lg,
+    .is-xl,
+    .is-xxl,
+    .is-xxxl
+        display: none
+
+    @media (min-width: $screen-sm) and (max-width: $screen-md - 1)
+        .is-sm
+            display: initial
+
+    @media (min-width: $screen-md) and (max-width: $screen-lg - 1)
+        .is-md
+            display: initial
+
+    @media (min-width: $screen-lg) and (max-width: $screen-xl - 1)
+        .is-lg
+            display: initial
+
+    @media (min-width: $screen-xl) and (max-width: $screen-xxl - 1)
+        .is-xl
+            display: initial
+
+    @media (min-width: $screen-xxl) and (max-width: $screen-xxxl - 1)
+        .is-xxl
+            display: initial
+
+    @media (min-width: $screen-xxxl)
+        .is-xxxl
+            display: initial
+
++upward-visibility
++downward-visibility
+
++specific-visibility
