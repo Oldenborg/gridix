@@ -2,7 +2,7 @@
   "name": "css-gridix",
   "version": "1.0.3",
   "description": "Responsive CSS flexbox based grid system for modern webdesign",
-  "main": "dist/assets/style-dd636fad.css",
+  "main": "dist/assets/style-19d7d3f6.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "vite build",
